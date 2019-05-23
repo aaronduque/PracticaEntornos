@@ -89,6 +89,33 @@ public class PracticaEntornos {
                     int cantidad2 = numeros.nextInt();
                     cuen.retirarSaldo(cantidad2);
                     break;
+                case 6:
+                    System.out.println("Introduzca el nombre de la cuenta que manda");
+                    String nombre11 = palabras.nextLine();
+                    System.out.println("Introduzca el nombre de la cuenta que recibe");
+                    String nombre12 = palabras.nextLine();
+                    System.out.println("Introduce la cantidad a mandar");
+                    int cantidad22 = numeros.nextInt();
+                    CuentaBancaria cuentamanda = new CuentaBancaria();
+                    CuentaBancaria cuentarecibe = new CuentaBancaria();
+                    
+                    for(int i = 0; i<bbdd.size();i++){
+                        if(nombre11.equals(bbdd.get(i).getNombre())){
+                          cuentamanda = bbdd.get(i) ; 
+                        }
+                        if(nombre12.equals(bbdd.get(i).getNombre())){
+                          cuentarecibe = bbdd.get(i) ; 
+                        }
+                    }
+                    cuentamanda.retirarSaldo(cantidad22);
+                    cuentarecibe.ingresarSaldo(cantidad22);
+                    
+                    break;
+                case 7:
+                    System.out.println("Introduzca la Direccion a modificar");
+                    cli.setDireccion(palabras.nextLine());
+                    cli.setTelefono(palabras.nextInt());
+                    
                     
             }
             System.out.println("Opcion1: Crear cliente");
