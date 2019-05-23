@@ -32,10 +32,16 @@ public class CuentaBancaria {
         
         setSaldoActual(cantidadActual + cantidad);
     }
-    public void retirarSaldo(int cantidad){
+    public String retirarSaldo(int cantidad){
         int cantidadActual = getSaldoActual();
         
-        setSaldoActual(cantidadActual - cantidad);
+        if(cantidadActual < cantidad){
+            return "Usted no tiene tanto dinero en la cuenta";
+        }
+        else{
+            setSaldoActual(cantidadActual - cantidad);
+        }
+        return "Se ha podido retirar la jugada";
     }
 
     public int getSaldoActual() {
@@ -45,6 +51,29 @@ public class CuentaBancaria {
     public void setSaldoActual(int saldoActual) {
         this.saldoActual = saldoActual;
     }
-    
-    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Cliente getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Cliente propietario) {
+        this.propietario = propietario;
+    }
+
+    public int getCodigoCuenta() {
+        return codigoCuenta;
+    }
+
+    public void setCodigoCuenta(int codigoCuenta) {
+        this.codigoCuenta = codigoCuenta;
+    }
+
 }
