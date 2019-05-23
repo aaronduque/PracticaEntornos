@@ -5,6 +5,7 @@
  */
 package practicaentornos;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -23,6 +24,7 @@ public class PracticaEntornos {
         Scanner palabras = new Scanner(System.in);
         Cliente cli = new Cliente();
         CuentaBancaria cuen = new CuentaBancaria();
+        ArrayList <CuentaBancaria> bbdd = new ArrayList();
         
         while(centinela != 0){
             System.out.println("Opcion1: Crear cliente");
@@ -60,12 +62,24 @@ public class PracticaEntornos {
                     System.out.println("Escriba el codigo de la cuenta");
                     int codigoC = numeros.nextInt();
                     new CuentaBancaria(nombreC,cli,saldo,codigoC);
+                    bbdd.add(cuen);
                     break;
                     
                 case 3:
-                    System.out.println("Introduzca la cantidad a ingresar");
-                    int cantidad = numeros.nextInt();
-                    cuen.ingresarSaldo(cantidad);
+                    String cuenta = "";
+                    if (bbdd.size()>0){
+                        System.out.println("En que cuenta quiere ingresar dinero?");
+                        cuenta = palabras.nextLine();
+                    }
+                    for (int i = 0 ; i < bbdd.size(); i++){
+                        CuentaBancaria tmp;
+                        tmp = bbdd.get(i);
+                    }
+                    if (tmp.getNombreC.equals(cuenta)){
+                        System.out.println("Que cantidad quiere ingresar?");
+                        int cantidad = numeros.nextInt();
+                        cuen.ingresarSaldo(cantidad);
+                    }
                     
                     break;
                     
