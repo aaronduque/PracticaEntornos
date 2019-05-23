@@ -33,6 +33,8 @@ public class PracticaEntornos {
             System.out.println("Opcion3: Ingresar Saldo");
             System.out.println("Opcion4: Retirar Saldo");
             System.out.println("Opcion5: Pulse 0 para salir de la aplicacion");
+            System.out.println("Opcion6: Mandar dinero a otra cuenta");
+            System.out.println("Opcion7: Cambiar datos de cuenta");
             centinela = numeros.nextInt();
             
             switch(centinela){
@@ -122,7 +124,9 @@ public class PracticaEntornos {
             System.out.println("Opcion2: Crear cuenta");
             System.out.println("Opcion3: Ingresar Saldo");
             System.out.println("Opcion4: Retirar Saldo");
-            System.out.println("Opcion5: Pulse 0 para salir de la aplicacion");
+            System.out.println("Pulse 0 para salir de la aplicacion");
+            System.out.println("Opcion6: Mandar dinero a otra cuenta");
+            System.out.println("Opcion7: Cambiar datos de cuenta");
             centinela = numeros.nextInt();
                 
           
