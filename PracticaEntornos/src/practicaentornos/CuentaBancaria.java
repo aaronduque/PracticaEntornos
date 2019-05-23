@@ -10,10 +10,10 @@ package practicaentornos;
  * @author Pedro
  */
 public class CuentaBancaria {
-    String nombre;
-    Cliente propietario;
-    int saldoActual;
-    int codigoCuenta;
+    private String nombre;
+    private Cliente propietario;
+    private int saldoActual;
+    private int codigoCuenta;
     
     public CuentaBancaria(){
         
