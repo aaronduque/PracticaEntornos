@@ -24,6 +24,7 @@ public class PracticaEntornos {
         Scanner palabras = new Scanner(System.in);
         Cliente cli = new Cliente();
         CuentaBancaria cuen = new CuentaBancaria();
+        CuentaBancaria tmp = new CuentaBancaria();
         ArrayList <CuentaBancaria> bbdd = new ArrayList();
         
         while(centinela != 0){
@@ -72,10 +73,10 @@ public class PracticaEntornos {
                         cuenta = palabras.nextLine();
                     }
                     for (int i = 0 ; i < bbdd.size(); i++){
-                        CuentaBancaria tmp;
+                        
                         tmp = bbdd.get(i);
                     }
-                    if (tmp.getNombreC.equals(cuenta)){
+                    if (tmp.getNombre().equals(cuenta)){
                         System.out.println("Que cantidad quiere ingresar?");
                         int cantidad = numeros.nextInt();
                         cuen.ingresarSaldo(cantidad);
